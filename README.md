@@ -49,30 +49,21 @@ Designed in Altium Designer as a compact shield-form-factor board for STM32-base
 
 The MCP2515 is a standalone CAN 2.0B controller that talks to the host MCU over SPI, paired here with a CAN transceiver to interface with the actual bus. It handles the CAN protocol side (arbitration, error handling, message filtering) so the STM32 just needs to configure it and move messages in and out over SPI. The driver in this repo covers initialization, mode configuration (normal, listen-only, sleep, configuration mode), register-level SPI access, and CAN transmit/receive.
 
-## Repo structure
+## Repository Structure
 
 ```text
 .
 ├── Core/
 │   ├── Inc/
+│   │   └── ...
 │   └── Src/
 │       ├── main.c
-│       ├── stm32f4xx_hal_msp.c
-│       ├── stm32f4xx_it.c
-│       ├── syscalls.c
-│       ├── sysmem.c
-│       └── system_stm32f4xx.c
-│
+│       ├── CANSPI.c
+│       ├── MCP2515_CAN.c
+│       └── ...
 ├── Drivers/
 ├── Startup/
-│
-├── CANSPI.c
-├── MCP2515_CAN.c
-│
-├── customized_CanBusShield.ioc
-├── STM32F429VETX_FLASH.ld
-├── STM32F429VETX_RAM.ld
-│
+│   └── ...
 └── README.md
 ```
 
@@ -82,7 +73,7 @@ STM32CubeIDE, STM32 HAL, Altium Designer for the PCB.
 
 ## Tested on
 
-STM32F429 paired with the MCP2515, built and flashed through STM32CubeIDE.
+Customized Can Shield with Cangroo.
 
 ## License
 
