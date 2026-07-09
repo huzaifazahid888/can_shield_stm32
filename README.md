@@ -69,12 +69,8 @@ The MCP2515 is a standalone CAN 2.0B controller that talks to the host MCU over 
 
 ## Development environment
 
-STM32CubeIDE, STM32 HAL, Altium Designer for the PCB.
+STM32CubeIDE, Cangroo , Altium Designer for the PCB.
 
 ## Tested on
 
 Customized Can Shield with Cangroo.
-
-## License
-
-MIT.
